@@ -1,5 +1,6 @@
 package synchr;
 
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -19,6 +20,7 @@ import synchr.controller.BlockController;
  **/
 
 public class Syn {
+    private static final Logger LOGGER = Logger.getLogger(Syn.class);
 
     public static void main(String[] args) {
 
@@ -35,17 +37,13 @@ public class Syn {
         ClassPathXmlApplicationContext ac = new ClassPathXmlApplicationContext("/springConfig/applicationContext-mvc.xml");
         BlockController blockController=(BlockController)ac.getBean("blockKelly");
         String  s=blockController.blockKe();
+        LOGGER.info("-------"+s);
         System.out.println("-------"+s);
     }
 
     public  void testGetAccount(){
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("/springConfig/applicationContext-mvc.xml");
 
-        //ApplicationContext context = new ClassPathXmlApplicationContext("/springConfig/applicationContext-mvc.xml");
-        //HelloBean helloBean = (HelloBean)context.getBean("helloBean");
-//        ClassPathXmlApplicationContext ac = new ClassPathXmlApplicationContext(context);
-
-        //    1. 如果放bbs在这个static方法中，就不行. 2. 这个getBean 就是controller 类的实例
         AccountController accountController=(AccountController)context.getBean("accountController");
         String testName= accountController.findById(4).getName();
         System.out.println("-----"+testName);

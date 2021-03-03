@@ -1,0 +1,31 @@
+2021-03-02 15:09:53.117 [main] INFO  com.huading.shrt.ShrtApplication - Starting ShrtApplication using Java 1.8.0_131 on LAPTOP-H7EVED7B with PID 8392 (D:\Git\huaDingHai2Shr\shrt\target\classes started by admin in D:\Git\huaDingHai2Shr)
+2021-03-02 15:09:53.121 [main] INFO  com.huading.shrt.ShrtApplication - No active profile set, falling back to default profiles: default
+2021-03-02 15:10:26.031 [main] INFO  com.huading.shrt.ShrtApplication - Starting ShrtApplication using Java 1.8.0_131 on LAPTOP-H7EVED7B with PID 892 (D:\Git\huaDingHai2Shr\shrt\target\classes started by admin in D:\Git\huaDingHai2Shr)
+2021-03-02 15:10:26.034 [main] INFO  com.huading.shrt.ShrtApplication - No active profile set, falling back to default profiles: default
+2021-03-02 15:10:29.034 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+2021-03-02 15:10:29.046 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-03-02 15:10:29.047 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-02 15:10:29.200 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-03-02 15:10:29.200 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3083 ms
+2021-03-02 15:10:29.499 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'accountController': Unsatisfied dependency expressed through field 'accountService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'accountServiceImpl': Unsatisfied dependency expressed through field 'accountDao'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'accountDao' defined in file [D:\Git\huaDingHai2Shr\shrt\target\classes\com\huading\shrt\mapper\AccountDao.class]: Cannot resolve reference to bean 'data2SqlSessionTemplate' while setting bean property 'sqlSessionTemplate'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'data2SqlSessionTemplate' defined in class path resource [com/huading/shrt/config/db/MybatisPlusConfigData2.class]: Unsatisfied dependency expressed through method 'data2SqlSessionTemplate' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'data2SqlSessionFactory' defined in class path resource [com/huading/shrt/config/db/MybatisPlusConfigData2.class]: Unsatisfied dependency expressed through method 'data2SqlSessionFactory' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'data2DataSource' defined in class path resource [com/huading/shrt/config/db/DataSourceConfig.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker': Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.NoUniqueBeanDefinitionException: No qualifying bean of type 'org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' available: expected single matching bean but found 2: data2DataSourceProperties,spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties
+2021-03-02 15:10:29.505 [main] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2021-03-02 15:10:29.523 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-03-02 15:10:29.573 [main] ERROR o.s.b.diagnostics.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 1 of constructor in org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker required a single bean, but 2 were found:
+	- data2DataSourceProperties: defined by method 'data2DataSourceProperties' in class path resource [com/huading/shrt/config/db/DataSourceConfig.class]
+	- spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties: defined in null
+
+
+Action:
+
+Consider marking one of the beans as @Primary, updating the consumer to accept multiple beans, or using @Qualifier to identify the bean that should be consumed
+

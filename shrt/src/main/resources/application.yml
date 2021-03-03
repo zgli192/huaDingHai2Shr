@@ -1,0 +1,39 @@
+server:
+  port: 8888
+spring:
+  datasource:
+    data2:
+      username: root
+      password: Volvo000
+      driverClassName:  com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://127.0.0.1:3306/db_library_seats?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+#      url: jdbc:mysql://10.98.100.95:3306/oasycshr?useUnicode=true&characterEncoding=UTF-8&serverTimezone=GMT%2B8&useSSL=false
+#  OA 数据库
+#    data1:
+#      username: user-for-oa
+#      password: o4.hdgL.C0m
+##      driver-class-name: com.mysql.cj.jdbc.Driver
+#      driverClassName: com.mysql.cj.jdbc.Driver
+#      url: jdbc:mysql://10.98.100.197:3306/a8?useUnicode=true&characterEncoding=UTF-8&serverTimezone=GMT%2B8&useSSL=false
+mybatis:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations: classpath:mappers/**/*.xml
+#oatoshr:
+#  config:
+#    #补签卡
+#    fillCardConfig:
+#      #扫描多少天前审批通过的数据
+#      scanBeforeDays: -3
+#      #补签日期有效期
+#      effectDays: -7
+#    workOverTimeConfig:
+#      #扫描多少天前的数据
+#      scanBeforeDays: -2
+
+
+logging:
+  level:
+    com.hdgt.oashr.mapper: debug
+  file:
+    path: ./log

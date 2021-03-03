@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="shrCompare.dao.OaUserDao">
+
+
+    <select id="findById"  resultType="shrCompare.entity.OaUser">
+SELECT	om.NAME as name ,ou.NAME as unit,op.NAME as post,om.CODE,
+        om.EXT_ATTR_10 as orPost, om.EXT_ATTR_1 as phone,om.EXT_ATTR_2 as mailAddr
+FROM	org_member om
+	LEFT JOIN org_post op ON ( om.ORG_POST_ID = op.ID )
+	LEFT JOIN org_unit ou ON ( om.ORG_DEPARTMENT_ID = ou.ID )
+WHERE state=1
+        <if
+            test="_parameter != null">
+            <![CDATA[
+             and om.`CODE`=#{code}
+            ]]>
+        </if>
+	</select>
+
+    <select id="findAll" parameterType="oaUser" resultType="oaUser">
+        SELECT	om.NAME as name ,ou.NAME as unit,op.NAME as post,om.CODE,
+        om.EXT_ATTR_10 as orPost, om.EXT_ATTR_1 as phone,om.EXT_ATTR_2 as mailAddr
+FROM	org_member om
+	LEFT JOIN org_post op ON ( om.ORG_POST_ID = op.ID )
+	LEFT JOIN org_unit ou ON ( om.ORG_DEPARTMENT_ID = ou.ID )
+WHERE state=1
+    </select>
+
+</mapper>

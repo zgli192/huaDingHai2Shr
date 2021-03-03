@@ -34,7 +34,7 @@ public class TestGetPro {
         Properties properties=new Properties();
         InputStream in= TestGetPro.class.getResourceAsStream("Config/doorMap.properties");
         InputStream ini= TestGetPro.class.getResourceAsStream("/config.properties");
-        System.out.println(ini);
+//        System.out.println(ini);
         //TestGetPro.class.getClassLoader().getResourceAsStream("Config/doorMap.properties");
         try{
             properties.load(ini);
@@ -42,7 +42,7 @@ public class TestGetPro {
 
             String s=properties.getProperty("USERNAME");
             String s1=properties.getProperty("PWS");
-            System.out.println(s1+"*******88"+s);
+            System.out.println(s1+"*******"+s);
             while (enumeration.hasMoreElements()){
                 String strKey=(String)enumeration.nextElement();
                 String strValue=properties.getProperty(strKey);

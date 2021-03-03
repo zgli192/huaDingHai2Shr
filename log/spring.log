@@ -1,0 +1,90 @@
+2021-03-02 15:11:46.258  INFO 24060 --- [main] com.huading.shrt.ShrtApplication         : Starting ShrtApplication using Java 1.8.0_131 on LAPTOP-H7EVED7B with PID 24060 (D:\Git\huaDingHai2Shr\shrt\target\classes started by admin in D:\Git\huaDingHai2Shr)
+2021-03-02 15:11:46.261  INFO 24060 --- [main] com.huading.shrt.ShrtApplication         : No active profile set, falling back to default profiles: default
+2021-03-02 15:11:48.987  INFO 24060 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
+2021-03-02 15:11:48.998  INFO 24060 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-03-02 15:11:48.999  INFO 24060 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-02 15:11:49.142  INFO 24060 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-03-02 15:11:49.142  INFO 24060 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2809 ms
+2021-03-02 15:11:49.303  WARN 24060 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'accountController': Unsatisfied dependency expressed through field 'accountService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'accountServiceImpl': Unsatisfied dependency expressed through field 'accountDao'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'accountDao' defined in file [D:\Git\huaDingHai2Shr\shrt\target\classes\com\huading\shrt\mapper\AccountDao.class]: Cannot resolve reference to bean 'data2SqlSessionTemplate' while setting bean property 'sqlSessionTemplate'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'data2SqlSessionTemplate' defined in class path resource [com/huading/shrt/config/db/MybatisPlusConfigData2.class]: Unsatisfied dependency expressed through method 'data2SqlSessionTemplate' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'data2SqlSessionFactory' defined in class path resource [com/huading/shrt/config/db/MybatisPlusConfigData2.class]: Unsatisfied dependency expressed through method 'data2SqlSessionFactory' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'data2DataSource' defined in class path resource [com/huading/shrt/config/db/DataSourceConfig.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker': Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.NoUniqueBeanDefinitionException: No qualifying bean of type 'org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' available: expected single matching bean but found 2: data2DataSourceProperties,spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties
+2021-03-02 15:11:49.307  INFO 24060 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2021-03-02 15:11:49.319  INFO 24060 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-03-02 15:11:49.345 ERROR 24060 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 1 of constructor in org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker required a single bean, but 2 were found:
+	- data2DataSourceProperties: defined by method 'data2DataSourceProperties' in class path resource [com/huading/shrt/config/db/DataSourceConfig.class]
+	- spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties: defined in null
+
+
+Action:
+
+Consider marking one of the beans as @Primary, updating the consumer to accept multiple beans, or using @Qualifier to identify the bean that should be consumed
+
+2021-03-02 15:14:48.094  INFO 18868 --- [main] com.huading.shrt.ShrtApplication         : Starting ShrtApplication using Java 1.8.0_131 on LAPTOP-H7EVED7B with PID 18868 (D:\Git\huaDingHai2Shr\shrt\target\classes started by admin in D:\Git\huaDingHai2Shr)
+2021-03-02 15:14:48.099  INFO 18868 --- [main] com.huading.shrt.ShrtApplication         : No active profile set, falling back to default profiles: default
+2021-03-02 15:14:51.034  INFO 18868 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
+2021-03-02 15:14:51.046  INFO 18868 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-03-02 15:14:51.047  INFO 18868 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-02 15:14:51.203  INFO 18868 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-03-02 15:14:51.203  INFO 18868 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3017 ms
+2021-03-02 15:14:51.363  WARN 18868 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'accountController': Unsatisfied dependency expressed through field 'accountService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'accountServiceImpl': Unsatisfied dependency expressed through field 'accountDao'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'accountDao' defined in file [D:\Git\huaDingHai2Shr\shrt\target\classes\com\huading\shrt\mapper\AccountDao.class]: Cannot resolve reference to bean 'data2SqlSessionTemplate' while setting bean property 'sqlSessionTemplate'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'data2SqlSessionTemplate' defined in class path resource [com/huading/shrt/config/db/MybatisPlusConfigData2.class]: Unsatisfied dependency expressed through method 'data2SqlSessionTemplate' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'data2SqlSessionFactory' defined in class path resource [com/huading/shrt/config/db/MybatisPlusConfigData2.class]: Unsatisfied dependency expressed through method 'data2SqlSessionFactory' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'data2DataSource' defined in class path resource [com/huading/shrt/config/db/DataSourceConfig.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker': Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.NoUniqueBeanDefinitionException: No qualifying bean of type 'org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' available: expected single matching bean but found 2: data2DataSourceProperties,spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties
+2021-03-02 15:14:51.369  INFO 18868 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2021-03-02 15:14:51.385  INFO 18868 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-03-02 15:14:51.408 ERROR 18868 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 1 of constructor in org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker required a single bean, but 2 were found:
+	- data2DataSourceProperties: defined by method 'data2DataSourceProperties' in class path resource [com/huading/shrt/config/db/DataSourceConfig.class]
+	- spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties: defined in null
+
+
+Action:
+
+Consider marking one of the beans as @Primary, updating the consumer to accept multiple beans, or using @Qualifier to identify the bean that should be consumed
+
+2021-03-02 15:15:23.102  INFO 18076 --- [main] com.huading.shrt.ShrtApplication         : Starting ShrtApplication using Java 1.8.0_131 on LAPTOP-H7EVED7B with PID 18076 (D:\Git\huaDingHai2Shr\shrt\target\classes started by admin in D:\Git\huaDingHai2Shr)
+2021-03-02 15:15:23.105  INFO 18076 --- [main] com.huading.shrt.ShrtApplication         : No active profile set, falling back to default profiles: default
+2021-03-02 15:15:25.943  INFO 18076 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
+2021-03-02 15:15:25.955  INFO 18076 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-03-02 15:15:25.955  INFO 18076 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-02 15:15:26.104  INFO 18076 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-03-02 15:15:26.104  INFO 18076 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2923 ms
+2021-03-02 15:15:28.188  INFO 18076 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService
+2021-03-02 15:15:28.262  INFO 18076 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'mySimpleAsync'
+2021-03-02 15:15:28.264  INFO 18076 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService
+2021-03-02 15:15:28.264  INFO 18076 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'myAsync'
+2021-03-02 15:15:29.159  INFO 18076 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2021-03-02 15:15:29.257  INFO 18076 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
+2021-03-02 15:15:29.288  INFO 18076 --- [main] com.huading.shrt.ShrtApplication         : Started ShrtApplication in 6.738 seconds (JVM running for 7.455)
+2021-03-02 15:15:29.377  INFO 18076 --- [scheduling-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-03-02 15:15:30.653  INFO 18076 --- [scheduling-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-03-02 16:48:14.109  INFO 18004 --- [main] com.huading.shrt.ShrtApplication         : Starting ShrtApplication using Java 1.8.0_131 on LAPTOP-H7EVED7B with PID 18004 (D:\Git\huaDingHai2Shr\shrt\target\classes started by admin in D:\Git\huaDingHai2Shr)
+2021-03-02 16:48:14.141  INFO 18004 --- [main] com.huading.shrt.ShrtApplication         : No active profile set, falling back to default profiles: default
+2021-03-02 16:48:17.369  INFO 18004 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
+2021-03-02 16:48:17.382  INFO 18004 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-03-02 16:48:17.382  INFO 18004 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-02 16:48:17.573  INFO 18004 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-03-02 16:48:17.573  INFO 18004 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3231 ms
+2021-03-02 16:48:19.628  INFO 18004 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService
+2021-03-02 16:48:19.629  INFO 18004 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'mySimpleAsync'
+2021-03-02 16:48:19.631  INFO 18004 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService
+2021-03-02 16:48:19.632  INFO 18004 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'myAsync'
+2021-03-02 16:48:20.245  INFO 18004 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2021-03-02 16:48:20.302  INFO 18004 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
+2021-03-02 16:48:20.319  INFO 18004 --- [main] com.huading.shrt.ShrtApplication         : Started ShrtApplication in 7.515 seconds (JVM running for 8.628)
+2021-03-02 16:48:20.363  INFO 18004 --- [scheduling-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-03-02 16:48:21.559  INFO 18004 --- [scheduling-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
